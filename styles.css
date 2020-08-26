@@ -1,0 +1,138 @@
+.flexbox-container {
+    height: 700px;
+
+    /* 
+     * Allows to style the flexibility and sizing of different 
+     * elemnts in the container from the actual container selector.
+    */
+    display: flex;
+    
+    /* With no justify-content applied, flex-start is the
+     * default value for justify-content, which makes so 
+     * that all the element will align at the start of the
+     * main axis (main-axis or cross-axis).
+     * -----------------------------------------------------
+     * space-between: all the extra space will be put evenly
+     * space-around: even amount of space on all sides of the
+     * flex items.
+     */
+    /* justify-content: space-around; */
+
+    /*
+     * align-items: default is stretch, items will stretch to fit
+     * flex-start: will align elements at the top of the flex container
+     * based on the axis.
+     * -----------------------------------------------------
+     * center: will center vertically.
+     */
+    /* align-items: center; */
+
+    /*
+     * Only for using on multi line flexbox containers, also start,
+     * center, end to position in on the start of the box bottom or
+     * center of the element.
+     * space-between: even space between items.
+    */
+    /*align-content: flex-start;*/
+
+    /*
+     * Will wrap the items instead of shrinking the size.
+    */
+    /*flex-wrap: wrap;*/
+
+    /*
+     * Will align in column or row.
+    */
+    /* flex-direction: column; */
+
+    /*
+     * align content, dependent on the axis.
+    */
+    /* justify-content: center; */
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+
+.flexbox-item-1 {
+    min-height: 100px;
+    /* 
+     * Default: items shrinks in size, but flex-shrink: 0 will prevent shrinking.
+    */
+    flex-shrink: 0;
+
+    /*
+     * Can override the align content of other containers.
+    */
+    align-self: flex-end;
+
+    /*
+     * Will rearrange the order of items, not recomended because it messes up
+     * the flow of screen readers, people who use it will get confused.
+    */
+    /* order: 3; */
+
+    /*
+     * first number: flex grow
+     * second number: flex shrink
+     * third number: flex basis
+     * if only one is used it can automatically asign the rest of the values
+    */
+    /* flex: 1 0 0px; */
+}
+
+.flexbox-item-2 {
+    min-height: 100px;
+
+    /* 
+     * Flex-grow: to make items grow bigger if extra space is available.
+     * can me used on multiple items!
+     * using a bigger number will use more space.
+    */
+    flex-grow: 1;
+
+    /*
+     * Width set is used to calculate the raning space but flex-basis will
+     * start calculating the remaning space on a X:Y proportion based on a
+     * starting point.
+    */
+    flex-basis: 0;
+    
+    /*
+     * Can override the align content of other containers.
+    */
+    align-self: center;
+
+    /*
+     * Will rearrange the order of items, not recomended because it messes up
+     * the flow of screen readers, people who use it will get confused.
+    */
+    /* order: 1; */
+}
+
+.flexbox-item-3 {
+    min-height: 100px;
+
+    /* 
+     * Flex-grow: to make items grow bigger if extra space is available.
+     * can me used on multiple items!
+     */
+    flex-grow: 1;
+
+    /*
+     * Width set is used to calculate the raning space but flex-basis will
+     * start calculating the remaning space on a X:Y proportion based on a
+     * starting point.
+    */
+    flex-basis: 0;
+
+    /*
+     * Will rearrange the order of items, not recomended because it messes up
+     * the flow of screen readers, people who use it will get confused.
+    */
+    /* order: 2; */
+}
